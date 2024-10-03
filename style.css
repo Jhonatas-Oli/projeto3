@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+header {
+    background: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #e8491d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilos das seções */
+main {
+    padding: 40px 20px;
+}
+
+#sobre, #servicos, #portfolio, #contato {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.service {
+    margin: 20px 0;
+}
+
+/* Parte de Cima */
+footer {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #e8491d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/* Estilizando a seção de portfólio */
+#portfolio .video-container {
+    display: grid;                      /* Define o container como grid */
+    grid-template-columns: repeat(4, 1fr);  /* Define 4 colunas, cada uma com a mesma largura */
+    gap: 20px;                          /* Espaço entre os vídeos */
+    margin-top: 20px;
+}
+
+#portfolio video {
+    width: 100%;                        /* Faz os vídeos ocuparem 100% da coluna */
+    height: auto;                       /* Mantém a proporção do vídeo */
+    border-radius: 10px;                /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave ao redor dos vídeos */
+}
+/* Quando a tela for menor que 1200px, mostre 3 vídeos por linha */
+@media (max-width: 1200px) {
+    #portfolio .video-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Quando a tela for menor que 900px, mostre 2 vídeos por linha */
+@media (max-width: 900px) {
+    #portfolio .video-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Quando a tela for menor que 600px, mostre 1 vídeo por linha */
+@media (max-width: 600px) {
+    #portfolio .video-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
